@@ -1,0 +1,23 @@
+<databaseChangeLog 
+	  xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+	   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+	   http://www.liquibase.org/xml/ns/dbchangelog 
+	   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	   
+   <changeSet id="bank table creation" author="Aswatth">
+	   	<createTable tableName="mobile">
+		   <column name="number" type="VARCHAR(10)"><constraints primaryKey="true" nullable="false"/></column>
+		   <column name="model" type="VARCHAR(10)"></column>
+	   	</createTable>
+	   	<rollback>
+	   		<dropTable tableName="mobile"/>
+ 	   	</rollback>
+   </changeSet>
+	    
+	<changeSet id="tag_1.1" author="Aswatth">
+	    <tagDatabase tag="1.1"/>
+  	</changeSet>    
+</databaseChangeLog>

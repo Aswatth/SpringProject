@@ -1,0 +1,2 @@
+insert into user values('aswatth@myMail.com','Aswatth','$2y$05$04MUGRiwKcMj68Y3FeW/reWLz/hcbx6ZHM01o3O73k672vSuNMhYu');
+insert into user values('abcd@myMail.com','Abcd','$2y$05$04MUGRiwKcMj68Y3FeW/reWLz/hcbx6ZHM01o3O73k672vSuNMhYu');

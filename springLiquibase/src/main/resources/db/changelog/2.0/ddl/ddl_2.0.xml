@@ -1,0 +1,24 @@
+<databaseChangeLog 
+	  xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+	   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+	   http://www.liquibase.org/xml/ns/dbchangelog 
+	   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+	   
+   <changeSet author="Aswatth" id="adding mobile">
+        <addColumn tableName="user">
+	        <column name="mobile_number" type="VARCHAR(10)">
+	        </column>
+        </addColumn>
+        <rollback>
+	        <dropColumn tableName="user">
+		        <column name="mobile_number"></column>
+	        </dropColumn>
+        </rollback>
+    </changeSet>
+    <changeSet id="tag_2.0" author="Aswatth">
+	    <tagDatabase tag="2.0"/>
+  	</changeSet>
+</databaseChangeLog>
